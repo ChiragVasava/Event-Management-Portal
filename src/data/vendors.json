@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Luxe Weddings Co.",
+    "categories": ["personal"],
+    "styles": ["luxury", "modern"],
+    "location": "New York, USA",
+    "rating": 4.7,
+    "services": ["Wedding Planning", "Decor", "Photography"],
+    "tags": ["bridal", "ballroom", "floral", "white", "elegant"],
+    "portfolioImages": ["/placeholder.svg?height=240&width=360"]
+  },
+  {
+    "id": 2,
+    "name": "Rustic Roots Events",
+    "categories": ["personal", "professional"],
+    "styles": ["rustic", "boho"],
+    "location": "Austin, USA",
+    "rating": 4.5,
+    "services": ["Catering", "Event Design"],
+    "tags": ["barn", "wood", "string-lights", "outdoor"],
+    "portfolioImages": ["/placeholder.svg?height=240&width=360"]
+  },
+  {
+    "id": 3,
+    "name": "Minimalist Moments",
+    "categories": ["professional"],
+    "styles": ["minimalist"],
+    "location": "Berlin, Germany",
+    "rating": 4.2,
+    "services": ["Corporate AV", "Venue"],
+    "tags": ["clean", "white-space", "geometric"],
+    "portfolioImages": ["/placeholder.svg?height=240&width=360"]
+  }
+]

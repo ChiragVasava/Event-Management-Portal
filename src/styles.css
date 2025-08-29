@@ -1,0 +1,27 @@
+/* Tailwind v4: import the framework directly */
+@import "tailwindcss";
+
+/* App color tokens (keep 3-5 colors total)
+   Primary: teal-600; Neutrals: white, gray-900, gray-100; Accent: amber-500 */
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-gray-900;
+}
+
+a {
+  @apply text-teal-600 hover:underline;
+}
+
+.container {
+  @apply mx-auto max-w-6xl px-4;
+}

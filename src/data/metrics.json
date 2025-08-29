@@ -1,0 +1,33 @@
+{
+  "accuracy": [
+    { "t": "T-4", "value": 72 },
+    { "t": "T-3", "value": 75 },
+    { "t": "T-2", "value": 77 },
+    { "t": "T-1", "value": 80 }
+  ],
+  "responseTimeMs": [
+    { "t": "T-4", "value": 420 },
+    { "t": "T-3", "value": 360 },
+    { "t": "T-2", "value": 310 },
+    { "t": "T-1", "value": 280 }
+  ],
+  "relevanceScore": [
+    { "t": "T-4", "value": 0.62 },
+    { "t": "T-3", "value": 0.66 },
+    { "t": "T-2", "value": 0.71 },
+    { "t": "T-1", "value": 0.75 }
+  ],
+  "taggingPrecision": [
+    { "t": "T-4", "value": 0.64 },
+    { "t": "T-3", "value": 0.67 },
+    { "t": "T-2", "value": 0.7 },
+    { "t": "T-1", "value": 0.72 }
+  ],
+  "promptSuccess": [
+    { "t": "T-4", "value": 54 },
+    { "t": "T-3", "value": 58 },
+    { "t": "T-2", "value": 61 },
+    { "t": "T-1", "value": 65 }
+  ],
+  "searchToClickRatio": { "value": 42 }
+}
