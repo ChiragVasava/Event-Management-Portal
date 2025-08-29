@@ -1,14 +1,14 @@
 [
-  {
+    {
     "id": 1,
-    "name": "Luxe Weddings Co.",
+    "name": "Cultural Essence Planners",
     "categories": ["personal"],
-    "styles": ["luxury", "modern"],
-    "location": "New York, USA",
-    "rating": 4.7,
-    "services": ["Wedding Planning", "Decor", "Photography"],
-    "tags": ["bridal", "ballroom", "floral", "white", "elegant"],
-    "portfolioImages": ["/placeholder.svg?height=240&width=360"]
+    "styles": ["traditional", "cultural"],
+    "location": "Mumbai, India",
+    "rating": 4.6,
+    "services": ["Wedding Planning", "Music & Dance", "Decor"],
+    "tags": ["colors", "heritage", "festive", "customs"],
+    "portfolioImages": ["/006.jpg"]
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "rating": 4.5,
     "services": ["Catering", "Event Design"],
     "tags": ["barn", "wood", "string-lights", "outdoor"],
-    "portfolioImages": ["/placeholder.svg?height=240&width=360"]
+    "portfolioImages": ["/002.jpeg"]
   },
   {
     "id": 3,
@@ -30,6 +30,75 @@
     "rating": 4.2,
     "services": ["Corporate AV", "Venue"],
     "tags": ["clean", "white-space", "geometric"],
-    "portfolioImages": ["/placeholder.svg?height=240&width=360"]
-  }
+    "portfolioImages": ["/003.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Glamour Gala Planners",
+    "categories": ["personal", "professional"],
+    "styles": ["glamorous", "luxury"],
+    "location": "Los Angeles, USA",
+    "rating": 4.8,
+    "services": ["Event Design", "Celebrity Management", "Catering"],
+    "tags": ["red-carpet", "champagne", "spotlight", "velvet"],
+    "portfolioImages": ["/004.jpg"]
+  },
+  {
+    "id": 5,
+    "name": "Eco Harmony Events",
+    "categories": ["professional"],
+    "styles": ["eco-friendly", "organic"],
+    "location": "Vancouver, Canada",
+    "rating": 4.4,
+    "services": ["Sustainable Decor", "Catering", "Workshops"],
+    "tags": ["green", "plants", "outdoor", "nature", "zero-waste"],
+    "portfolioImages": ["/005.jpg"]
+  },
+    {
+    "id": 6,
+    "name": "Luxe Weddings Co.",
+    "categories": ["personal"],
+    "styles": ["luxury", "modern"],
+    "location": "New York, USA",
+    "rating": 4.7,
+    "services": ["Wedding Planning", "Decor", "Photography"],
+    "tags": ["bridal", "ballroom", "floral", "white", "elegant"],
+    "portfolioImages": ["/001.jpg"]
+  },
+  {
+    "id": 7,
+    "name": "Skyline Corporate Events",
+    "categories": ["professional"],
+    "styles": ["modern", "corporate"],
+    "location": "Singapore",
+    "rating": 4.3,
+    "services": ["Conferences", "Expos", "Team Building"],
+    "tags": ["cityscape", "networking", "tech", "business"],
+    "portfolioImages": ["/007.jpg"]
+  },
+  {
+  "id": 8,
+  "name": "Bravos Sea",
+  "categories": ["personal", "fantasy"],
+  "styles": ["coastal", "romantic", "medieval", "fantasy"],
+  "location": "Santorini, Greece | Inspired by Braavos, Game of Thrones",
+  "rating": 4.9,
+  "services": [
+    "Fantasy Theme Setup",
+    "Medieval Music & Props"
+  ],
+  "tags": [
+    "ocean",
+    "sunset",
+    "beach",
+    "blue-white",
+    "romance",
+    "braavos",
+    "game of thrones",
+    "iron bank",
+    "valar morghulis"
+  ],
+  "portfolioImages": ["/008.jpg"]
+}
+
 ]

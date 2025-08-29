@@ -14,11 +14,40 @@ export default function HomePage() {
           <p className="mt-3 text-gray-600">
             Image-based discovery, smart text search, and vendor portfolios — all in one place.
           </p>
-          <div className="mt-6">
-            <Link to="/search" className="inline-block bg-teal-600 text-black rounded-md px-4 py-2 hover:bg-teal-700 hover:text-black">
-              Start Searching
+
+          <div className="mt-6 flex justify-center">
+            <Link
+              to="/search"
+              className="
+      inline-block 
+      bg-teal-600
+      text-white
+      font-semibold 
+      rounded-lg 
+      px-6 
+      py-3
+      shadow-lg 
+      transition-all 
+      duration-300 
+      ease-in-out 
+      hover:bg-teal-700
+      hover:shadow-xl 
+      hover:scale-105
+      hover:no-underline
+      focus:outline-none 
+      focus:ring-4 
+      focus:ring-teal-300
+      focus:ring-offset-2
+      active:scale-95
+      no-underline
+    "
+            >
+              <p className="text-black">
+                Start Searching
+              </p>
             </Link>
           </div>
+
         </div>
       </section>
 
