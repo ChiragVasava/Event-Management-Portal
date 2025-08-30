@@ -36,3 +36,38 @@ Modern, responsive SPA to discover event vendors via image-based and text search
 - Auth-protected routes: `/dashboard`, `/vendor*` require sign-in; vendor role is chosen at sign-up.
 - Search: `/search` tabs (Image/Text/Results) with Top-10 returned and response time shown.
 - Portfolio Manager runs COCO-SSD on-device and shows suggested tags (no remote storage in MVP).
+
+## Install Cloudinary
+## Get the Cloudinary React SDK
+npm i @cloudinary/url-gen @cloudinary/react
+
+## Optimize and Transform
+```js
+import React from 'react'
+import { Cloudinary } from '@cloudinary/url-gen';
+import { auto } from '@cloudinary/url-gen/actions/resize';
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
+import { AdvancedImage } from '@cloudinary/react';
+
+const App = () => {
+  const cld = new Cloudinary({ cloud: { cloudName: 'dfsyznpth' } });
+  
+  // Use this sample image or upload your own via the Media Explorer
+  const img = cld
+        .image('cld-sample-5')
+        .format('auto') // Optimize delivery by resizing and applying auto-format and auto-quality
+        .quality('auto')
+        .resize(auto().gravity(autoGravity()).width(500).height(500)); // Transform the image: auto-crop to square aspect_ratio
+
+  return (<AdvancedImage cldImg={img}/>);
+};
+
+export default App
+```
+
+Cloud name dfsyznpth
+API key	345599265182956
+API secret 2wRwXuScXcAStvS2c-Xptc0phzE
+API environment variable CLOUDINARY_URL=cloudinary://345599265182956:2wRwXuScXcAStvS2c-Xptc0phzE@dfsyznpth
+
+https://github.com/ChiragVasava/Event-Management-Portal

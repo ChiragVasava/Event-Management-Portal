@@ -5,20 +5,22 @@ import vendors from "../data/vendors.json"
 export default function HomePage() {
   const featured = vendors.slice(0, 6)
   return (
-    <div>
-      <section className="bg-gray-50">
-        <div className="container py-12 text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold text-balance">
-            Find the perfect vendors for your next event
-          </h1>
-          <p className="mt-3 text-gray-600">
-            Image-based discovery, smart text search, and vendor portfolios — all in one place.
-          </p>
+    <>
+    <div class="fixed inset-0 -z-10 w-full min-h-screen bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <div>
+        <section className="">
+          <div className="container py-12 text-center">
+            <h1 className="text-3xl md:text-4xl font-semibold text-balance">
+              Find the perfect vendors for your next event
+            </h1>
+            <p className="mt-3 text-gray-600">
+              Image-based discovery, smart text search, and vendor portfolios — all in one place.
+            </p>
 
-          <div className="mt-6 flex justify-center">
-            <Link
-              to="/search"
-              className="
+            <div className="mt-6 flex justify-center">
+              <Link
+                to="/search"
+                className="
       inline-block 
       bg-teal-600
       text-white
@@ -41,27 +43,28 @@ export default function HomePage() {
       active:scale-95
       no-underline
     "
-            >
-              <p className="text-black">
-                Start Searching
-              </p>
-            </Link>
+              >
+                <p className="text-black">
+                  Start Searching
+                </p>
+              </Link>
+            </div>
+
           </div>
+        </section>
 
-        </div>
-      </section>
-
-      <section className="container py-10">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold">Featured Vendors</h2>
-          <Link to="/vendors">Browse all</Link>
-        </div>
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {featured.map((v) => (
-            <VendorCard key={v.id} vendor={v} />
-          ))}
-        </div>
-      </section>
-    </div>
+        <section className="container py-10">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold">Featured Vendors</h2>
+            <Link to="/vendors">Browse all</Link>
+          </div>
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featured.map((v) => (
+              <VendorCard key={v.id} vendor={v} />
+            ))}
+          </div>
+        </section>
+      </div>
+    </>
   )
 }

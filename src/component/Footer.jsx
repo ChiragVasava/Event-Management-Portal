@@ -2,7 +2,11 @@ import { Link } from "react-router-dom"
 
 export default function Footer() {
   return (
-    <footer className="border-t bg-gray-50">
+    <>
+    
+    <div class="fixed inset-0 -z-10 w-full min-h-screen bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+    <footer className="border-t bg-white">
       <div className="container py-8 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
         <div className="text-center md:text-left">
           <div className="flex items-center gap-2 justify-center md:justify-start">
@@ -48,5 +52,6 @@ export default function Footer() {
         </nav>
       </div>
     </footer>
+    </>
   )
 }

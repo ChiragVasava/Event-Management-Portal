@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useState } from "react"
-import { getImageEmbedding, getTextEmbedding, searchVendorsByEmbedding } from "../services/searchService.js"
+import { searchVendorsByText } from "../services/searchService.js"
 
 const Ctx = createContext(null)
 
@@ -11,11 +11,12 @@ export function SearchProvider({ children }) {
   const [searching, setSearching] = useState(false)
 
   async function runImageSearch(filesOrUrl) {
+    // For simplified version, we'll just do a text search with a default query
     try {
       setSearching(true)
-      const file = Array.isArray(filesOrUrl) ? filesOrUrl[0] : filesOrUrl
-      const emb = await getImageEmbedding(file)
-      const { results, responseTimeMs } = await searchVendorsByEmbedding(emb)
+      // In a real implementation, we might extract text from the image
+      // For now, we'll just search for "event"
+      const { results, responseTimeMs } = searchVendorsByText("event")
       setResults(results)
       setResponseTimeMs(responseTimeMs)
     } finally {
@@ -26,8 +27,7 @@ export function SearchProvider({ children }) {
   async function runTextSearch(text) {
     try {
       setSearching(true)
-      const emb = await getTextEmbedding(text)
-      const { results, responseTimeMs } = await searchVendorsByEmbedding(emb)
+      const { results, responseTimeMs } = searchVendorsByText(text)
       setResults(results)
       setResponseTimeMs(responseTimeMs)
     } finally {

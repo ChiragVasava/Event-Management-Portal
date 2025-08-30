@@ -1,5 +1,4 @@
 import vendors from "../data/vendors.json"
-import { getImageEmbedding, getTextEmbedding } from "../services/searchService.js"
 
 const store = {
   docs: [], // { id, vector: Float32Array, metadata }
@@ -26,30 +25,19 @@ export function cosineSimilarity(a, b) {
 }
 
 export function search(queryVector, k = 10) {
-  const scored = store.docs.map((d) => ({ id: d.id, score: cosineSimilarity(queryVector, d.vector) }))
-  scored.sort((a, b) => b.score - a.score)
-  return scored.slice(0, k)
+  // For simplified search, we'll return all vendors with a default score
+  return vendors.map(v => ({ id: v.id, score: 1 })).slice(0, k)
 }
 
-// Lazy precompute: embed first portfolio image if available; else embed text (name + tags)
+// Simplified precompute that just creates dummy embeddings
 let precomputed = false
 export async function precomputeVendorEmbeddings() {
   if (precomputed) return
   const docs = []
   for (const v of vendors) {
-    let vec
-    try {
-      if (v.portfolioImages?.[0]) {
-        vec = await getImageEmbedding(v.portfolioImages[0])
-      } else {
-        vec = await getTextEmbedding(`${v.name} ${v.tags?.join(" ") ?? ""}`)
-      }
-      docs.push({ id: v.id, vector: vec, metadata: { vendor: v } })
-    } catch (e) {
-      // fallback: zeros
-      vec = new Float32Array(512)
-      docs.push({ id: v.id, vector: vec, metadata: { vendor: v } })
-    }
+    // Create a dummy vector
+    const vec = new Float32Array(512)
+    docs.push({ id: v.id, vector: vec, metadata: { vendor: v } })
   }
   upsertDocuments(docs)
   precomputed = true
