@@ -39,7 +39,9 @@ Modern, responsive SPA to discover event vendors via image-based and text search
 
 ## Install Cloudinary
 ## Get the Cloudinary React SDK
+```bash
 npm i @cloudinary/url-gen @cloudinary/react
+```
 
 ## Optimize and Transform
 ```js
@@ -65,9 +67,26 @@ const App = () => {
 export default App
 ```
 
-Cloud name dfsyznpth
-API key	345599265182956
-API secret 2wRwXuScXcAStvS2c-Xptc0phzE
-API environment variable CLOUDINARY_URL=cloudinary://345599265182956:2wRwXuScXcAStvS2c-Xptc0phzE@dfsyznpth
+## if you heaven't connected this project with your backend and still want to see User Dashboard and Vendor Dashboard use below email adn password
 
-https://github.com/ChiragVasava/Event-Management-Portal
+## User :
+```json
+  {
+    "id": "user1",
+    "email": "user@example.com",
+    "password": "password9875115061",
+    "name": "Test User",
+    "role": "user"
+  }
+```
+## Vendor :
+
+```json
+  {
+    "id": "vendor1",
+    "email": "vendor@example.com",
+    "password": "password123",
+    "name": "Test Vendor",
+    "role": "vendor"
+  }
+```
